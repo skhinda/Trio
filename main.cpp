@@ -3,9 +3,13 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-void sortDescending(int,int,int);
+void sortDescending(int&,int&,int&);
 void swap(int&,int&);
 
+/***********
+ * main function.
+ * Takes 3 numbers as input and sorts them and then displays them.
+ */
 int main()
 {
   int numA, numB, numC;
@@ -19,7 +23,10 @@ int main()
   return 0;
 }
 
-void sortDescending(int first, int second, int third)
+/***********
+ * Sorts the numbers from greatest to smallest.
+ **********/
+void sortDescending(int &first, int &second, int &third)
 {
   if( first < third )
   {
@@ -35,6 +42,11 @@ void sortDescending(int first, int second, int third)
   }
 }
 
+/***********
+ * Swaps numbers.
+ * Sets first number to temp and them replaces first with the second and then sets
+ * the second equal to temp.
+ **********/
 void swap(int &first, int &second)
 {
   int temp = first;
